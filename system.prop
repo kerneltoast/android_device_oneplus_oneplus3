@@ -53,6 +53,9 @@ ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 
+# Display
+persist.sys.strictmode.disable=true
+
 # Fingerprint
 persist.qfp=false
 
