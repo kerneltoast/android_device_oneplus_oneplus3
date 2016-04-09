@@ -58,6 +58,7 @@ typedef struct loc_gps_cfg_s
     uint32_t       GPS_LOCK;
     uint32_t       A_GLONASS_POS_PROTOCOL_SELECT;
     uint32_t       AGPS_CERT_WRITABLE_MASK;
+    uint32_t       AGPS_CONFIG_INJECT;
 } loc_gps_cfg_s_type;
 
 /* NOTE: the implementaiton of the parser casts number
