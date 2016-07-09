@@ -1,2 +1,0 @@
-allow perfd system_server:file write;
-allow perfd mediacodec:process signull;
