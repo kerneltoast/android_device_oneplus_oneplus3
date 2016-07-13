@@ -112,6 +112,12 @@ on enable-low-power
     write /sys/kernel/msm_thermal/sampling_ms 8000
     write /sys/kernel/msm_thermal/enabled 1
 
+    write /sys/module/cluster_plug/parameters/load_threshold_down 18
+    write /sys/module/cluster_plug/parameters/load_threshold_up 55
+    write /sys/module/cluster_plug/parameters/vote_threshold_down 5
+    write /sys/module/cluster_plug/parameters/vote_threshold_up 1
+    write /sys/module/cluster_plug/parameters/active 1
+
     setprop sys.io.scheduler deadline
 
 on charger
