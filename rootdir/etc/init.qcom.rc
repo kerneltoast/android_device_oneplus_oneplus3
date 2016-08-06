@@ -111,8 +111,14 @@ on boot
     chmod 0660 /proc/tri-state-key/keyCode_bottom
 
     # Vibrator permissions
-    chown system system /sys/class/timed_output/vibrator/vmax_mv
-    chmod 0644 /sys/class/timed_output/vibrator/vmax_mv
+    chown system system /sys/class/timed_output/vibrator/vtg_default
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_default
+    chown system system /sys/class/timed_output/vibrator/vtg_level
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_level
+    chown system system /sys/class/timed_output/vibrator/vtg_max
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_max
+    chown system system /sys/class/timed_output/vibrator/vtg_min
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_min
 
     # Graphics
     chown system graphics /sys/class/graphics/fb0/dyn_pu
