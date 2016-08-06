@@ -61,6 +61,10 @@ on enable-low-power
     write /sys/kernel/cpu_input_boost/ib_duration_ms 1300
     write /sys/kernel/cpu_input_boost/enabled 1
 
+    # GPU input boost
+    write /sys/module/governor_msm_adreno_tz/parameters/boost_freq 214000000
+    write /sys/module/governor_msm_adreno_tz/parameters/boost_duration 100
+
     # Setting b.L scheduler parameters
     write /proc/sys/kernel/sched_boost 0
     write /proc/sys/kernel/sched_downmigrate 45
