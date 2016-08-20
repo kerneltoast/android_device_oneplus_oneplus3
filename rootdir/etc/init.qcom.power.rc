@@ -1,12 +1,14 @@
+on early-init
+    # Enable sched boost
+    write /proc/sys/kernel/sched_boost 1
+    setprop sys.io.scheduler noop
+
 on boot
     # Update foreground and background cpusets
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 2-3
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
-
-    # Enable sched boost
-    write /proc/sys/kernel/sched_boost 1
 
 on enable-low-power
     # Disable thermal bcl hotplug to switch governor
@@ -107,6 +109,8 @@ on enable-low-power
     # Starting io prefetcher service
     start iop
 
+    setprop sys.io.scheduler deadline
+
 on charger
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
@@ -116,11 +120,8 @@ on charger
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
     start dashd
 
-on class_start:late_start
+on property:sys.boot_completed=1
     trigger enable-low-power
 
 on property:init.svc.recovery=running
     trigger enable-low-power
-
-on property:dev.bootcomplete=1
-    setprop sys.io.scheduler "bfq"
