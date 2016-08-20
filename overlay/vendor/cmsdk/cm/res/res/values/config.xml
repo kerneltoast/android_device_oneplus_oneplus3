@@ -42,6 +42,4 @@
          OLED displays and can cause a bit of discoloration. Reinvestigate after tuning -->
     <bool name="config_defaultCABC">false</bool>
 
-    <!-- Turn on LiveDisplay auto mode by default -->
-    <integer name="config_defaultLiveDisplayMode">2</integer>
 </resources>
