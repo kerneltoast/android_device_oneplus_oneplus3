@@ -188,6 +188,7 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+WITH_LZMA_OTA := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
