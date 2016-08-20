@@ -125,6 +125,7 @@ on enable-low-power
     setprop sys.io.scheduler deadline
 
 on charger
+    write /sys/class/leds/button-backlight/brightness 0
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
