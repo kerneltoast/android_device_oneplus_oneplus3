@@ -68,6 +68,9 @@ ro.sf.lcd_density=480
 sdm.perf_hint_window=50
 persist.hwc.enable_vds=1
 
+# Media
+media.camera.ts.monotonic=false
+
 # NFC
 ro.nfc.port=I2C
 
