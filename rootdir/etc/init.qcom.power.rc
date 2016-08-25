@@ -32,7 +32,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1190400
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "85 1100000:35 1200000:49 1300000:71 1400000:95"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "89 1100000:35 1200000:49 1300000:71 1400000:95"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 100000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
@@ -50,7 +50,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 1036800
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "85 1300000:35 1500000:49 1600000:71 1700000:95"
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "89 1300000:35 1500000:49 1600000:71 1700000:95"
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 100000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
@@ -117,9 +117,9 @@ on enable-low-power
     write /sys/kernel/msm_thermal/enabled 1
 
     write /sys/module/cluster_plug/parameters/load_threshold_down 18
-    write /sys/module/cluster_plug/parameters/load_threshold_up 55
+    write /sys/module/cluster_plug/parameters/load_threshold_up 60
     write /sys/module/cluster_plug/parameters/vote_threshold_down 5
-    write /sys/module/cluster_plug/parameters/vote_threshold_up 1
+    write /sys/module/cluster_plug/parameters/vote_threshold_up 2
     write /sys/module/cluster_plug/parameters/active 1
 
     setprop sys.io.scheduler deadline
