@@ -32,7 +32,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1190400
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "89 1100000:35 1200000:49 1300000:71 1400000:95"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "85 1100000:35 1200000:49 1300000:71 1400000:95"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 100000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
@@ -50,7 +50,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 1036800
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "89 1300000:35 1500000:49 1600000:71 1700000:95"
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "89 1400000:35 1600000:49 1800000:71 1900000:95"
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 100000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
@@ -104,7 +104,7 @@ on enable-low-power
 
     # Set thermal restrictions
     write /sys/kernel/msm_thermal/enabled 0
-    write /sys/kernel/msm_thermal/zone0 "1324800 1632000 40 38"
+    write /sys/kernel/msm_thermal/zone0 "1401600 1785600 40 38"
     write /sys/kernel/msm_thermal/zone1 "1324800 1555200 41 40"
     write /sys/kernel/msm_thermal/zone2 "1228800 1478400 42 41"
     write /sys/kernel/msm_thermal/zone3 "1228800 1401600 43 42"
@@ -152,7 +152,7 @@ on property:sys.perf.profile=0
 
     # Set normal thermal restrictions
     write /sys/kernel/msm_thermal/enabled 0
-    write /sys/kernel/msm_thermal/zone0 "1324800 1632000 40 38"
+    write /sys/kernel/msm_thermal/zone0 "1401600 1785600 40 38"
     write /sys/kernel/msm_thermal/zone1 "1324800 1555200 41 40"
     write /sys/kernel/msm_thermal/zone2 "1228800 1478400 42 41"
     write /sys/kernel/msm_thermal/zone3 "1228800 1401600 43 42"
@@ -177,7 +177,7 @@ on property:sys.perf.profile=1
 
     # Set normal thermal restrictions
     write /sys/kernel/msm_thermal/enabled 0
-    write /sys/kernel/msm_thermal/zone0 "1324800 1632000 40 38"
+    write /sys/kernel/msm_thermal/zone0 "1401600 1785600 40 38"
     write /sys/kernel/msm_thermal/zone1 "1324800 1555200 41 40"
     write /sys/kernel/msm_thermal/zone2 "1228800 1478400 42 41"
     write /sys/kernel/msm_thermal/zone3 "1228800 1401600 43 42"
@@ -206,7 +206,7 @@ on property:sys.perf.profile=2
 
     # Set light thermal restrictions for performance mode
     write /sys/kernel/msm_thermal/enabled 0
-    write /sys/kernel/msm_thermal/zone0 "1324800 1632000 46 44"
+    write /sys/kernel/msm_thermal/zone0 "1401600 1785600 46 44"
     write /sys/kernel/msm_thermal/zone1 "1324800 1555200 47 46"
     write /sys/kernel/msm_thermal/zone2 "1228800 1478400 48 47"
     write /sys/kernel/msm_thermal/zone3 "1228800 1401600 49 48"
