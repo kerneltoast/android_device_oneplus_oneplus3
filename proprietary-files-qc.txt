@@ -152,7 +152,6 @@ vendor/lib64/libsdm-color.so|edd8f40b01cf7090605b99c4b9432517447635f0
 vendor/lib64/libsdm-diag.so|be5002f57a81f833955e175fd69a96df9fd60fa9
 vendor/lib64/libsdm-disp-apis.so|26aadf14251a337650c153f20defa758f09d3db7
 vendor/lib64/libsdmextension.so|0bc6c518d910d4262b132957e2413bd18278dec5
-vendor/lib64/libuiblur.so|4b3fabf5ded7c4af531abde681676fc5e9248494
 
 # Graphics firmware
 etc/firmware/a530_gpmu.fw2
@@ -338,13 +337,6 @@ vendor/lib64/libsensor_thresh.so
 vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.oem.so
 vendor/lib64/sensors.ssc.so
-
-# Thermal
-etc/thermal-engine.conf
-vendor/bin/thermal-engine
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
 
 # Time services
 -app/TimeService/TimeService.apk
