@@ -76,56 +76,28 @@ vendor/lib64/hw/gatekeeper.msm8996.so
 
 # GPS
 bin/loc_launcher
-bin/lowi-server
-bin/xtwifi-client
-bin/xtwifi-inet-agent
-etc/permissions/com.qti.location.sdk.xml
-framework/com.qti.location.sdk.jar
 -lib/libloc_api_v02.so
 -lib64/libloc_api_v02.so
-lib/libloc_ds_api.so|bf21a8e6c04232dabc8de252a52f03b8f23dca98
-lib64/libloc_ds_api.so|33022f3539db6b2201ed6efad05dcfa1e65db387
--priv-app/xtra_t_app/xtra_t_app.apk|e451268f4e7e6b245a7eaf2a1ece15920449640a
-vendor/bin/slim_daemon
+lib/libloc_ds_api.so
+lib64/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
-vendor/lib/libalarmservice_jni.so
 vendor/lib/libdataitems.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
-vendor/lib/libloc_ext.so
 vendor/lib/liblocationservice.so
-vendor/lib/liblocationservice_glue.so
 vendor/lib/liblowi_client.so
-vendor/lib/libquipc_os_api.so
 vendor/lib/libulp2.so
-vendor/lib/libxtadapter.so
-vendor/lib/libxtwifi_ulp_adaptor.so
-vendor/lib/libxt_native.so
 vendor/lib64/hw/flp.default.so
-vendor/lib64/libalarmservice_jni.so
-vendor/lib64/libasn1cper.so
-vendor/lib64/libasn1crt.so
-vendor/lib64/libasn1crtx.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libflp.so
-vendor/lib64/libgdtap.so
 vendor/lib64/libgeofence.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_ext.so
-vendor/lib64/libloc_xtra.so
 vendor/lib64/liblocationservice.so
-vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
-vendor/lib64/liblowi_wifihal.so
-vendor/lib64/liblowi_wifihal_nl.so
-vendor/lib64/libquipc_os_api.so
 vendor/lib64/libulp2.so
-vendor/lib64/libxt_native.so
-vendor/lib64/libxtadapter.so
-vendor/lib64/libxtwifi_ulp_adaptor.so
 
 # Graphics
 vendor/lib/egl/eglSubDriverAndroid.so|8749809c6c82fd1e32e81b64a47a6d28ae648751
@@ -256,7 +228,6 @@ vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 vendor/lib/libqti-wl.so
-vendor/lib/libquipc_os_api.so
 vendor/lib/libsmemlog.so
 vendor/lib/libvqzip.so
 vendor/lib64/libdiag.so
@@ -276,7 +247,6 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqti-wl.so
-vendor/lib64/libquipc_os_api.so
 vendor/lib64/libsmemlog.so
 
 # Radio
