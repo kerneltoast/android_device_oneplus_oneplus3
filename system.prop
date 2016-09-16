@@ -42,9 +42,6 @@ ro.qualcomm.foss=1
 config.foss.xml=1
 config.foss.path=/system/etc/FOSSConfig.xml
 
-# CNE
-persist.cne.feature=1
-
 # Data modules
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
