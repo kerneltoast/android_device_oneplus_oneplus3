@@ -1,15 +1,12 @@
 # ADSP
 bin/adsprpcd
 vendor/lib/libadsprpc.so
-vendor/lib/libadsp_hvx_callback_skel.so|8f92b634a5dc12974f9aa328a559d23062a6e5a6
-vendor/lib/libadsp_hvx_stub.so|a0ebd84979be6e8773a2e7161b23e999b35d5c00
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
 
 # ADSP modules
-vendor/lib/rfsa/adsp/libadsp_fd_skel.so|5607a78451b621bb6399878ab58ba896c72797ab
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
@@ -78,8 +75,6 @@ vendor/lib64/hw/gatekeeper.msm8996.so
 bin/loc_launcher
 -lib/libloc_api_v02.so
 -lib64/libloc_api_v02.so
-lib/libloc_ds_api.so
-lib64/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libdataitems.so
 vendor/lib/libflp.so
@@ -198,13 +193,6 @@ bin/pm-proxy
 bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
-
-# Postprocessing
-etc/permissions/com.qti.snapdragon.sdk.display.xml
-framework/com.qti.snapdragon.sdk.display.jar|40155ded72576461a58da0f8b3a931bde22c2956
--vendor/app/colorservice/colorservice.apk|57ea38e1c70f6059536ed65d9084ae2a177c4ac8
-vendor/bin/mm-pp-dpps|692fd4feb26b9ad9aa25a57dfd8650a405839a66
-vendor/lib64/libdisp-aba.so|3a3c9fef00c57b3d5b293cb69be0823ba900b2ee
 
 # QMI
 bin/irsc_util
