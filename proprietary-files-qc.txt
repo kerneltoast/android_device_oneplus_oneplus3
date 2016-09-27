@@ -194,6 +194,13 @@ bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
+# Postprocessing
+etc/permissions/com.qti.snapdragon.sdk.display.xml
+framework/com.qti.snapdragon.sdk.display.jar|40155ded72576461a58da0f8b3a931bde22c2956
+-vendor/app/colorservice/colorservice.apk|57ea38e1c70f6059536ed65d9084ae2a177c4ac8
+vendor/bin/mm-pp-dpps|692fd4feb26b9ad9aa25a57dfd8650a405839a66
+vendor/lib64/libdisp-aba.so|3a3c9fef00c57b3d5b293cb69be0823ba900b2ee
+
 # QMI
 bin/irsc_util
 etc/permissions/qti_permissions.xml
