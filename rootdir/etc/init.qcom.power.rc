@@ -116,11 +116,23 @@ on enable-low-power
     write /sys/kernel/msm_thermal/sampling_ms 8000
     write /sys/kernel/msm_thermal/enabled 1
 
-    write /sys/module/cluster_plug/parameters/load_threshold_down 18
-    write /sys/module/cluster_plug/parameters/load_threshold_up 60
-    write /sys/module/cluster_plug/parameters/vote_threshold_down 5
-    write /sys/module/cluster_plug/parameters/vote_threshold_up 2
-    write /sys/module/cluster_plug/parameters/active 1
+    # Hotplug settings for LITTLE cluster
+    write /sys/devices/system/cpu/cpu0/core_ctl/always_online_cpu "1 0"
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 20
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 60
+    write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 0
+    write /sys/devices/system/cpu/cpu0/core_ctl/max_cpus 2
+    write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 1
+    write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms 600
+
+    # Hotplug settings for big cluster
+    write /sys/devices/system/cpu/cpu2/core_ctl/always_online_cpu "1 0"
+    write /sys/devices/system/cpu/cpu2/core_ctl/busy_down_thres 25
+    write /sys/devices/system/cpu/cpu2/core_ctl/busy_up_thres 75
+    write /sys/devices/system/cpu/cpu2/core_ctl/is_big_cluster 1
+    write /sys/devices/system/cpu/cpu2/core_ctl/max_cpus 2
+    write /sys/devices/system/cpu/cpu2/core_ctl/min_cpus 1
+    write /sys/devices/system/cpu/cpu2/core_ctl/offline_delay_ms 300
 
     setprop sys.io.scheduler deadline
 
@@ -141,8 +153,11 @@ on property:init.svc.recovery=running
 
 on property:sys.perf.profile=0
     # Set low-power performance settings
-    write /sys/module/cluster_plug/parameters/active 1
-    write /sys/module/cluster_plug/parameters/low_power_mode 1
+    write /sys/devices/system/cpu/cpu0/core_ctl/disable 1
+    write /sys/devices/system/cpu/cpu2/core_ctl/disable 1
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+
     write /sys/kernel/msm_thermal/user_maxfreq 1036800
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "conservative"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "conservative"
@@ -166,8 +181,9 @@ on property:sys.perf.profile=0
 
 on property:sys.perf.profile=1
     # Set normal performance settings
-    write /sys/module/cluster_plug/parameters/active 1
-    write /sys/module/cluster_plug/parameters/low_power_mode 0
+    write /sys/devices/system/cpu/cpu0/core_ctl/disable 0
+    write /sys/devices/system/cpu/cpu2/core_ctl/disable 0
+
     write /sys/kernel/msm_thermal/user_maxfreq 0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
@@ -190,8 +206,11 @@ on property:sys.perf.profile=1
     write /sys/kernel/msm_thermal/enabled 1
 
 on property:sys.perf.profile=2
+    # Set high performance settings
+    write /sys/devices/system/cpu/cpu0/core_ctl/disable 1
+    write /sys/devices/system/cpu/cpu2/core_ctl/disable 1
+
     # Keep little cluster at maxfreq
-    write /sys/module/cluster_plug/parameters/active 0
     write /sys/kernel/msm_thermal/user_maxfreq 0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
