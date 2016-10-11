@@ -134,7 +134,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/core_ctl/min_cpus 1
     write /sys/devices/system/cpu/cpu2/core_ctl/offline_delay_ms 300
 
-    setprop sys.io.scheduler deadline
+    setprop sys.io.scheduler cfq
 
 on charger
     write /sys/class/leds/button-backlight/brightness 0
