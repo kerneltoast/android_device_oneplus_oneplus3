@@ -57,7 +57,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 1
 
     # Input boost configuration
-    write /sys/kernel/cpu_input_boost/ib_freqs "1190400 1478400"
+    write /sys/kernel/cpu_input_boost/ib_freqs "1190400 1190400"
     write /sys/kernel/cpu_input_boost/ib_duration_ms 1400
     write /sys/kernel/cpu_input_boost/enabled 1
 
