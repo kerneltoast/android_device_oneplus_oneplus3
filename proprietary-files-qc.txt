@@ -165,6 +165,10 @@ etc/firmware/a530_zap.b01|4f515e4501e4fe00f0804317172293b6abd7e93a
 etc/firmware/a530_zap.b02|657ce04bbb8cc88ccead7c22ed1e3ca1776c7518
 etc/firmware/a530_zap.elf|2cd9001f7625587d68bc7aab8b3f840f068c2c49
 etc/firmware/a530_zap.mdt|1386c62156951c38eb6ccbfaf9881afe037a7891
+etc/firmware/a530_zap-pro.b00
+etc/firmware/a530_zap-pro.b01
+etc/firmware/a530_zap-pro.b02
+etc/firmware/a530_zap-pro.mdt
 etc/firmware/a530v1_pfp.fw
 etc/firmware/a530v1_pm4.fw
 etc/firmware/a530v2_seq.fw2

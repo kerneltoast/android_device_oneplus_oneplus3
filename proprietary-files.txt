@@ -403,4 +403,5 @@ etc/sensors/sensor_def_qcomdev.conf
 # TP firmware
 etc/firmware/tp/fw_synaptics_15801.img
 etc/firmware/tp/fw_synaptics_15801b.img
+etc/firmware/tp/fw_synaptics_15811.img
 etc/firmware/tp/fw_synaptics_touchkey.img
