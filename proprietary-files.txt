@@ -371,7 +371,8 @@ vendor/lib/libmmcamera_isp_sub_module.so
 
 # Display calibration
 -etc/qdcm_calib_data_samsung_s6e3fa3_1080p_cmd_mode_dsi_panel.xml
--etc/qdcm_calib_data_samsung_s6e3fa3_1080p_video_mode_dsi_panel.xml
+-etc/qdcm_calib_data_samsung_s6e3fa5_1080p_cmd_mode_dsi_panel.xml
+-etc/qdcm_calib_data_samsung_s6e3fa5r9s_1080p_cmd_mode_dsi_panel.xml
 
 # Fingerprint sensor
 bin/qfp-daemon
