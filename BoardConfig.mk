@@ -179,11 +179,16 @@ TARGET_POWERHAL_VARIANT := none
 TARGET_RIL_VARIANT := caf
 
 # Recovery
+TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oneplus
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 WITH_LZMA_OTA := true
+
+# Release tools
+TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)/releasetools
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk

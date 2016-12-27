@@ -267,6 +267,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     ueventd.qcom.rc
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_oneplus
+
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
