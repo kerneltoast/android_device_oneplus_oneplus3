@@ -35,9 +35,6 @@ qcom.bluetooth.soc=rome
 # Camera
 camera.disable_zsl_mode=1
 media.camera.ts.monotonic=false
-persist.camera.imglib.fddsp=1
-persist.camera.llc=1
-persist.camera.llnoise=1
 
 # CNE (needed for IMS)
 persist.cne.feature=1
