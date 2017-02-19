@@ -406,3 +406,17 @@ etc/firmware/tp/fw_synaptics_15801.img
 etc/firmware/tp/fw_synaptics_15801b.img
 etc/firmware/tp/fw_synaptics_15811.img
 etc/firmware/tp/fw_synaptics_touchkey.img
+
+# Venus (media) firmware
+etc/firmware/venus.b00|2a00b9b91f35c1a07323987eb7346c16f3ef5e74
+etc/firmware/venus.b01|987661b3c921d504bef757c1c1af4f325a7edd74
+etc/firmware/venus.b02|df10406f3a1c71a1d1f5dabcac00b55c26aabbe2
+etc/firmware/venus.b03|cc7043c3cc8762215c7b2a3511b8baa66161d1e6
+etc/firmware/venus.b04|c1756e0567d10a1173f481cd367ff4637b2dd77f
+etc/firmware/venus.mdt|0cb2dd262423c9644d4a2e29f3a28b09fb784519
+etc/firmware/venus-pro.b00|2a00b9b91f35c1a07323987eb7346c16f3ef5e74
+etc/firmware/venus-pro.b01|8005effcc922740f96485895bc4f167c038cb47f
+etc/firmware/venus-pro.b02|df10406f3a1c71a1d1f5dabcac00b55c26aabbe2
+etc/firmware/venus-pro.b03|cc7043c3cc8762215c7b2a3511b8baa66161d1e6
+etc/firmware/venus-pro.b04|c1756e0567d10a1173f481cd367ff4637b2dd77f
+etc/firmware/venus-pro.mdt|da91e37ffb79cf2f68d4e186453f33f8e3e5d6a8
