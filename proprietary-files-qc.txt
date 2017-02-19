@@ -57,6 +57,14 @@ etc/firmware/rampatch_tlv_3.2.tlv
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
+# CNE (needed for IMS)
+bin/cnd
+-priv-app/CNEService/CNEService.apk
+vendor/lib/libcne.so
+vendor/lib/libcneqmiutils.so
+vendor/lib64/libcne.so
+vendor/lib64/libcneqmiutils.so
+
 # DRM
 bin/qseecomd
 vendor/bin/qseeproxydaemon

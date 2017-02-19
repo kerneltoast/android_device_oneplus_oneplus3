@@ -35,6 +35,9 @@ qcom.bluetooth.soc=rome
 camera.disable_zsl_mode=1
 camera.hal1.packagelist=com.skype.raider,com.whatsapp,com.tencent.mm,com.google.android.GoogleCamera
 
+# CNE (needed for IMS)
+persist.cne.feature=1
+
 # Display power reduction (FOSS)
 ro.qcom.dpps.sensortype=3
 ro.qualcomm.display.paneltype=1
