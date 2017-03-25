@@ -73,6 +73,9 @@ media.camera.ts.monotonic=false
 # NFC
 ro.nfc.port=I2C
 
+# Perf
+ro.sys.fw.bg_apps_limit=60
+
 # QCOM
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 drm.service.enabled=true
