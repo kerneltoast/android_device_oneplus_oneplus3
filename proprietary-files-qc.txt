@@ -205,7 +205,7 @@ vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
 
 # Perf
-bin/energy-awareness|fd652a3805723dced5a53ac757ba59a9db2e973f
+bin/energy-awareness
 bin/msm_irqbalance
 
 # Peripheral manager
