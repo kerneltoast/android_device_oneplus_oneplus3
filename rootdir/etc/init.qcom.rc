@@ -305,9 +305,6 @@ on post-fs-data
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
-    #Create IOP  deamon related dirs
-    mkdir /data/misc/iop 0770 root system
-
     # Mark the copy complete flag to not completed
     write /data/misc/radio/copy_complete 0
     chown radio radio /data/misc/radio/copy_complete
@@ -342,14 +339,6 @@ on post-fs-data
     write /sys/block/dm-1/queue/read_ahead_kb 2048
     write /sys/block/sda/queue/read_ahead_kb 2048
     write /sys/block/sde/queue/read_ahead_kb 2048
-
-service iop /system/bin/iop
-    class main
-    user root
-    group root
-    disabled
-    socket iop seqpacket 0666 root system
-    writepid /dev/cpuset/system-background/tasks
 
 service qcomsysd /system/bin/qcom-system-daemon
     class main

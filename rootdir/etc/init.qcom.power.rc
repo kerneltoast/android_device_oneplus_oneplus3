@@ -109,9 +109,6 @@ on enable-low-power
     # Set idle GPU to 133 Mhz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
 
-    # Starting io prefetcher service
-    start iop
-
     setprop sys.io.scheduler cfq
 
     # update cpusets now that boot is complete and we want better load balancing
