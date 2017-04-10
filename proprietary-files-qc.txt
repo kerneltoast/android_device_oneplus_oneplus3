@@ -66,70 +66,17 @@ etc/firmware/rampatch_tlv_3.2.tlv
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
-# CNE
+# CNE (needed for IMS)
 bin/cnd
-etc/cne/SwimConfig.xml
-etc/cne/andsfCne.xml
-etc/cne/wqeclient/ATT/ATT_profile1.xml
-etc/cne/wqeclient/ATT/ATT_profile2.xml
-etc/cne/wqeclient/ATT/ATT_profile3.xml
-etc/cne/wqeclient/ATT/ATT_profile4.xml
-etc/cne/wqeclient/profile1.xml
-etc/cne/wqeclient/profile2.xml
-etc/cne/wqeclient/profile3.xml
-etc/cne/wqeclient/profile4.xml
-etc/cne/wqeclient/profile5.xml
-etc/cne/wqeclient/ROW/ROW_profile1.xml
-etc/cne/wqeclient/ROW/ROW_profile2.xml
-etc/cne/wqeclient/ROW/ROW_profile3.xml
-etc/cne/wqeclient/ROW/ROW_profile4.xml
-etc/cne/wqeclient/ROW/ROW_profile5.xml
-etc/cne/wqeclient/VZW/VZW_profile1.xml
-etc/cne/wqeclient/VZW/VZW_profile2.xml
-etc/cne/wqeclient/VZW/VZW_profile3.xml
-etc/cne/wqeclient/VZW/VZW_profile4.xml
-etc/cne/wqeclient/VZW/VZW_profile5.xml
-etc/cne/wqeclient/VZW/VZW_profile6.xml
-etc/permissions/ConnectivityExt.xml
-etc/permissions/cneapiclient.xml
-etc/permissions/com.quicinc.cne.xml
-framework/ConnectivityExt.jar
-framework/cneapiclient.jar
-framework/com.quicinc.cne.jar
 -priv-app/CNEService/CNEService.apk
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneqmiutils.so
-vendor/lib/libvendorconn.so
-vendor/lib/libwqe.so
 vendor/lib/libxml.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneqmiutils.so
-vendor/lib64/libvendorconn.so
-vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
-
-# DPM
-bin/dpmd
-etc/dpm/dpm.conf
-etc/dpm/nsrm/NsrmConfiguration.xml
-etc/permissions/com.qti.dpmframework.xml
-etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpmapi.jar
-framework/tcmclient.jar
--priv-app/dpmserviceapp/dpmserviceapp.apk
-vendor/lib/libdpmctmgr.so
-vendor/lib/libdpmfdmgr.so
-vendor/lib/libdpmframework.so
-vendor/lib/libdpmnsrm.so
-vendor/lib/libdpmtcm.so
-vendor/lib64/libdpmctmgr.so
-vendor/lib64/libdpmfdmgr.so
-vendor/lib64/libdpmframework.so
-vendor/lib64/libdpmnsrm.so
-vendor/lib64/libdpmtcm.so
 
 # DRM
 bin/qseecomd
@@ -270,11 +217,6 @@ vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
-
-# Network
--priv-app/QtiTetherService/QtiTetherService.apk
-vendor/lib64/libconnctrl.so
-vendor/lib64/libQtiTether.so
 
 # Perf
 bin/energy-awareness
