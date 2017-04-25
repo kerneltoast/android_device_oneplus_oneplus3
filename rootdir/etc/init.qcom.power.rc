@@ -40,9 +40,9 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 70
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1190400
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1228800
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "85 1100000:35 1200000:49 1300000:71 1400000:95"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "85 1100000:31 1200000:45 1300000:66 1400000:93"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 100000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
@@ -59,9 +59,9 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay 19000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/go_hispeed_load 70
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 1036800
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 1248000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "89 1400000:35 1600000:49 1800000:71 1900000:95"
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "87 1400000:31 1600000:45 1800000:66 1900000:93"
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 100000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
@@ -69,7 +69,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/enable_prediction 1
 
     # Input boost configuration
-    write /sys/kernel/cpu_input_boost/ib_freqs "1190400 1190400"
+    write /sys/kernel/cpu_input_boost/ib_freqs "1228800 1324800"
     write /sys/kernel/cpu_input_boost/ib_duration_ms 1400
     write /sys/kernel/cpu_input_boost/enabled 1
 
