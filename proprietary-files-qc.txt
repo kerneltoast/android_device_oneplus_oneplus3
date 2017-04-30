@@ -207,6 +207,7 @@ vendor/lib/libvqzip.so
 # Perf
 bin/energy-awareness
 bin/msm_irqbalance
+vendor/lib64/libqti-perfd-client.so
 
 # Peripheral manager
 bin/pm-proxy
