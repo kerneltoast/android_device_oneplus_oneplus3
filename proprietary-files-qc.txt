@@ -76,14 +76,18 @@ vendor/lib64/libbtnv.so
 
 # CNE (needed for IMS)
 bin/cnd
+etc/permissions/com.quicinc.cne.xml
+framework/com.quicinc.cne.jar
 -priv-app/CNEService/CNEService.apk
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneqmiutils.so
+vendor/lib/libconnctrl.so
 vendor/lib/libxml.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneqmiutils.so
+vendor/lib64/libconnctrl.so
 vendor/lib64/libxml.so
 
 # DRM
