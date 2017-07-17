@@ -333,11 +333,6 @@ service secotad /system/bin/secotad
 #    class core
 #    oneshot
 #
-service time_daemon /system/bin/time_daemon
-   class late_start
-   user root
-   group root
-   writepid /dev/cpuset/system-background/tasks
 
 service adsprpcd /system/bin/adsprpcd
    class main
