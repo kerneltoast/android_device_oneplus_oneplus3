@@ -24,6 +24,8 @@
 #include <camera/CameraParametersExtra.h>
 #include <system/graphics.h>
 
+#include <cutils/properties.h>
+
 namespace android {
 // Parameter keys to communicate between camera application and driver.
 const char CameraParameters::KEY_PREVIEW_SIZE[] = "preview-size";
@@ -178,6 +180,8 @@ const char CameraParameters::LIGHTFX_HDR[] = "high-dynamic-range";
 CAMERA_PARAMETERS_EXTRA_C
 #endif
 
+static bool isOp3tFrontCamera;
+
 CameraParameters::CameraParameters()
                 : mMap()
 {
@@ -242,8 +246,26 @@ void CameraParameters::unflatten(const String8 &params)
 
 void CameraParameters::set(const char *key, const char *value)
 {
+    char prop[PROPERTY_VALUE_MAX];
+
     if (key == NULL || value == NULL)
         return;
+
+    // Check if this is the OnePlus3T's front camera. If so, don't advertise
+    // manual ISO modes for it as manual ISOs crash the OnePlus3T's front camera.
+    if (property_get("ro.product.device", prop, NULL) &&
+            !strcmp(prop, "OnePlus3T") &&
+            !strcmp(key, KEY_SUPPORTED_FOCUS_MODES)) {
+        isOp3tFrontCamera = !strcmp(value, FOCUS_MODE_FIXED);
+    }
+
+    // KEY_SUPPORTED_FOCUS_MODES is set before KEY_QC_SUPPORTED_ISO_MODES
+    // in the camera HAL, so KEY_SUPPORTED_FOCUS_MODES can be used to detect
+    // if the front camera is in use in time to prevent KEY_QC_SUPPORTED_ISO_MODES
+    // from being set.
+    if (isOp3tFrontCamera && !strcmp(key, "iso-values")) {
+        return;
+    }
 
     // XXX i think i can do this with strspn()
     if (strchr(key, '=') || strchr(key, ';')) {
