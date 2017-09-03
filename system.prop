@@ -24,6 +24,8 @@ audio.offload.gapless.enabled=true
 audio.safx.pbe.enabled=true
 audio.parser.ip.buffer.size=262144
 qcom.hw.aac.encoder=true
+ro.config.vc_call_vol_steps=8
+ro.config.media_vol_steps=20
 
 # Battery
 ro.cutoff_voltage_mv=3250
