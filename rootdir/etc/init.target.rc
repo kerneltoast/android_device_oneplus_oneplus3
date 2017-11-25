@@ -66,18 +66,9 @@ on post-fs-data
     mkdir /data/misc/qvr 0770 system system
     mkdir /data/misc/audio_pp 0771 media audio
 
-on property:init.svc.bootanim=running
-    write /sys/class/leds/wled/brightness 4095
-
 on boot
     start rmt_storage
     start rfs_access
-# access permission for secure touch
-    chmod 0660 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
-    chmod 0440 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
-    chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
-    chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
-    write /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input0/update_fw 1
 
     # Update touchscreen and keypad firmware
     write /sys/bus/i2c/devices/12-0020/tp_fw_update 0
@@ -521,14 +512,6 @@ service mdtpd /system/vendor/bin/mdtpd
    class late_start
    user root
    group system radio drmrpc
-
-on charger
-    write /sys/devices/system/cpu/cpu2/online 0
-    write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
-    start hvdcp_opti
 
 service dhcpcd_eth0 /system/bin/dhcpcd -ABKLG
 	class late_start

@@ -171,9 +171,7 @@ on boot
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
 
-    # Allow access to emmc rawdump block partition and dload sysfs node
-    chown root system /dev/block/bootdevice/by-name/rawdump -p /dev/block/
-    chmod 0660 /dev/block/bootdevice/by-name/rawdump -p /dev/block/
+    # Allow access to dload sysfs node
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
@@ -803,7 +801,6 @@ service wifi-crda /system/bin/sh /system/etc/init.crda.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
-    start qti-testscripts
 
 service atfwd /system/bin/ATFWD-daemon
     class late_start
